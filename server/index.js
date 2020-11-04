@@ -40,7 +40,8 @@ app.get('/api/products', (req, res, next) => {
 });
 
 app.get('/api/products/:productId', (req, res, next) => {
-  const iD = req.params.productId;
+
+  const value = [req.params.productId];
   const sql =
     `select
     "productId",
@@ -50,8 +51,8 @@ app.get('/api/products/:productId', (req, res, next) => {
     "longDescription",
     "shortDescription"
     from "products"
-    where "productId" = ${iD}`;
-  db.query(sql)
+    where "productId" = $1`;
+  db.query(sql, value)
     .then(result => {
       const product = result.rows[0];
       res.json(product);
