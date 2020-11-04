@@ -21,12 +21,6 @@ class ProductList extends React.Component {
       });
   }
 
-  addPeriod() {
-    debugger;
-    var numberPrice = this.props.value.price / 100;
-    var newNumber = numberPrice.toFixed(2);
-  }
-
   render() {
     var items = this.state.value;
     var listItems = items.map(product => <ProductListItem key={product.productId} value={product} />);

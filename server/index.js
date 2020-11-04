@@ -1,11 +1,9 @@
 require('dotenv/config');
 const express = require('express');
-
 const db = require('./database');
 const ClientError = require('./client-error');
 const staticMiddleware = require('./static-middleware');
 const sessionMiddleware = require('./session-middleware');
-
 const app = express();
 
 app.use(staticMiddleware);
@@ -32,6 +30,30 @@ app.get('/api/products', (req, res, next) => {
     .then(result => {
       const product = result.rows;
       res.status(200);
+      res.json(product);
+    }).catch(err => {
+      console.error(err);
+      res.status(500).json({
+        error: 'An unexpected error occurred.'
+      });
+    });
+});
+
+app.get('/api/products/:productId', (req, res, next) => {
+  const iD = req.params.productId;
+  const sql =
+    `select
+    "productId",
+    "name",
+    "price",
+    "image",
+    "longDescription",
+    "shortDescription"
+    from "products"
+    where "productId" = ${iD}`;
+  db.query(sql)
+    .then(result => {
+      const product = result.rows[0];
       res.json(product);
     }).catch(err => {
       console.error(err);
