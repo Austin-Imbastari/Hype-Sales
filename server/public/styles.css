@@ -1,0 +1,52 @@
+body {
+  background-color: #F8F9FA;
+}
+
+.header-row{
+  padding-left:5%;
+  display: flex;
+  background-color: #333A40;
+  padding-bottom: .5%;
+  width: 100%;
+  margin-bottom: 1%;
+}
+
+.nav-heading {
+  padding-top: 1%;
+  color: white;
+  font-weight: 300;
+}
+
+.money-sign {
+  margin-top:1%;
+  color: white;
+}
+
+
+.card-container {
+  margin-top: 2%;
+  margin-bottom: 1%;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  -webkit-box-shadow: 5px 12px 12px 0px rgba(0,0,0,0.43);
+  box-shadow: 5px 12px 12px 0px rgba(0,0,0,0.43);
+
+}
+
+.card-title {
+  font-weight: 600;
+}
+
+.image {
+  height: 400px;
+  margin-left: 2px;
+  object-fit: contain;
+}
+
+.card-text {
+  color: #333a4082;
+  font-weight: 400;
+}
