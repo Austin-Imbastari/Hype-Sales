@@ -7,18 +7,28 @@ function addPeriod(oldprice) {
 }
 
 function ProductListItem(props) {
-  return <React.Fragment>
-    <div className="col-md-4 card-container">
-      <div className="card">
-        <img className="image" src={props.value.image}></img>
-        <div className="card-body">
-          <h5 className="card-title">{props.value.name} </h5>
-          <p className="card-text">${addPeriod(props.value.price)} </p>
-          <p className="card-des"> {props.value.shortDescription} </p>
+
+  function itemClick(e) {
+    e.preventDefault();
+    // this.setView({ name: 'details', params: { productId: product.productId } });
+    console.log(props);
+    props.setView('detail', props.value.productId);
+  }
+
+  return (
+    <React.Fragment>
+      <div onClick={itemClick} className="col-md-4 card-container">
+        <div className="card">
+          <img className="image" src={props.value.image}></img>
+          <div className="card-body">
+            <h5 className="card-title">{props.value.name} </h5>
+            <p className="card-text">${addPeriod(props.value.price)} </p>
+            <p className="card-des"> {props.value.shortDescription} </p>
+          </div>
         </div>
       </div>
-    </div>
-  </React.Fragment>;
+    </React.Fragment>
+  );
 }
 
 export default ProductListItem;
