@@ -69,6 +69,7 @@ body {
 .card-des-long {
   padding-left: 5px;
   padding-top: 20px;
+
 }
 
 .back-to-catalog:link {
@@ -85,4 +86,24 @@ back-to-catalog:hover {
 .card-details {
   padding: 20px;
     border: solid 1px rgba(0, 0, 0, 0.134);
+}
+
+.square_btn{
+    padding: 0.2em .5em;
+    text-decoration: none;
+    background: #03A9F4;
+    color: #FFF;
+    font-size: 12px;
+    border-bottom: solid 4px #627295;
+    border-radius: 10px;
+}
+.square_btn:active {
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    border-bottom: none;
+
+}
+button:focus {
+  outline:0;
 }

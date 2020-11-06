@@ -10,8 +10,6 @@ function ProductListItem(props) {
 
   function itemClick(e) {
     e.preventDefault();
-    // this.setView({ name: 'details', params: { productId: product.productId } });
-    console.log(props);
     props.setView('detail', props.value.productId);
   }
 
