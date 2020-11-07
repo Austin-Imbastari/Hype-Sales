@@ -98,6 +98,31 @@ app.get('/api/cartItems', (req, res, next) => {
     });
 });
 
+app.get('/api/cart', (req, res, next) => {
+  console.log('inside api/cart');
+  console.log(req.session.cartId);
+
+  if (!req.session.cartId) {
+    res.json([]);
+  } else {
+    const sql =
+        `select "c"."cartItemId",
+        "c"."price",
+        "p"."productId",
+        "p"."image",
+        "p"."name",
+        "p"."shortDescription"
+        from "cartItems" as "c"
+        join "products" as "p" using ("productId")
+        where "c"."cartId" = $1`;
+    const value = [req.session.cartId];
+    db.query(sql, value)
+      .then(result => {
+        res.json(result.rows);
+      });
+  }
+});
+
 app.post('/api/cart', (req, res, next) => {
   var proId = parseInt(req.body.productId);
   var values = [proId];
@@ -220,10 +245,6 @@ app.post('/api/cart', (req, res, next) => {
       console.error(error);
     });
 });
-
-function handleCartItem() {
-
-}
 
 app.use('/api', (req, res, next) => {
   next(new ClientError(`cannot ${req.method} ${req.originalUrl}`, 404));
