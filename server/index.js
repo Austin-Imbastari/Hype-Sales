@@ -130,41 +130,19 @@ app.post('/api/cart', (req, res, next) => {
       }
 
       if (req.session.cartId) {
-        var priceCartId = {
-          cartId: arrayCartId,
-          price: indexPrice
-        };
-      }
-      const sqlCart =
-      ` insert into "carts" ("cartId", "createdAt")
-          values (default, default)
-          returning "cartId" `;
+        console.log('cart id exists');
 
-      return db.query(sqlCart)
-        .then(result2 => {
-          // console.log('result2.rows[0]: ' + result2.rows[0]);
-          // var rowCartId = result2.rows;
-          var arrayCartId = result2.rows[0].cartId;
-          req.session.cartId = arrayCartId;
-          // console.log('req.session.cartId: ', req.session.cartId);
-
-          var priceCartId = {
-            cartId: arrayCartId,
-            price: indexPrice
-          };
-          console.log(priceCartId);
-
-          const sql3 = `insert into "cartItems" ("cartId", "productId", "price")
+        const sql3 = `insert into "cartItems" ("cartId", "productId", "price")
           values ($1, $2, $3)
           returning "cartItemId"`;
 
-          const values3 = [arrayCartId, proId, indexPrice];
-          return db.query(sql3, values3)
-            .then(result3 => {
-              // console.log('result3: ', result3);
+        const values3 = [req.session.cartId, proId, indexPrice];
+        return db.query(sql3, values3)
+          .then(result3 => {
+            // console.log('result3: ', result3);
 
-              const cartItemId = result3.rows[0].cartItemId;
-              const sql4 =
+            const cartItemId = result3.rows[0].cartItemId;
+            const sql4 =
               `select "c"."cartItemId",
                   "c"."price",
                   "p"."productId",
@@ -174,21 +152,78 @@ app.post('/api/cart', (req, res, next) => {
               from "cartItems" as "c"
               join "products" as "p" using ("productId")
             where "c"."cartItemId" = $1`;
-              const values4 = [cartItemId];
+            const values4 = [cartItemId];
 
-              return db.query(sql4, values4)
-                .then(result4 => {
+            return db.query(sql4, values4)
+              .then(result4 => {
+                // console.log(result4);
+                res.status(201).json(
+                  result4.rows[0]
+                );
+              });
+          });
+
+      } else {
+        const sqlCart =
+      ` insert into "carts" ("cartId", "createdAt")
+          values (default, default)
+          returning "cartId" `;
+
+        return db.query(sqlCart)
+          .then(result2 => {
+          // console.log('result2.rows[0]: ' + result2.rows[0]);
+          // var rowCartId = result2.rows;
+            var arrayCartId = result2.rows[0].cartId;
+            req.session.cartId = arrayCartId;
+            // console.log('req.session.cartId: ', req.session.cartId);
+
+            var priceCartId = {
+              cartId: arrayCartId,
+              price: indexPrice
+            };
+            console.log(priceCartId);
+
+            const sql3 = `insert into "cartItems" ("cartId", "productId", "price")
+          values ($1, $2, $3)
+          returning "cartItemId"`;
+
+            const values3 = [arrayCartId, proId, indexPrice];
+            return db.query(sql3, values3)
+              .then(result3 => {
+              // console.log('result3: ', result3);
+
+                const cartItemId = result3.rows[0].cartItemId;
+                const sql4 =
+              `select "c"."cartItemId",
+                  "c"."price",
+                  "p"."productId",
+                  "p"."image",
+                  "p"."name",
+                  "p"."shortDescription"
+              from "cartItems" as "c"
+              join "products" as "p" using ("productId")
+            where "c"."cartItemId" = $1`;
+                const values4 = [cartItemId];
+
+                return db.query(sql4, values4)
+                  .then(result4 => {
                   // console.log(result4);
-                  res.status(201).json(
-                    result4.rows[0]
-                  );
-                });
-            });
-        });
+                    res.status(201).json(
+                      result4.rows[0]
+                    );
+                  });
+              });
+          });
+      }
+
     }).catch(error => {
       console.error(error);
     });
 });
+
+function handleCartItem() {
+
+}
 
 app.use('/api', (req, res, next) => {
   next(new ClientError(`cannot ${req.method} ${req.originalUrl}`, 404));
