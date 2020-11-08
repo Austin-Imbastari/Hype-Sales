@@ -126,11 +126,7 @@ app.get('/api/cart', (req, res, next) => {
 app.post('/api/cart', (req, res, next) => {
   var proId = parseInt(req.body.productId);
   var values = [proId];
-
-  // var price = req.body.price;
-  // const numberPrice = price * 100;
   console.log('proId: ' + proId);
-  // console.log('numberPrice ' + price);
 
   if (!Number.isInteger(proId) || proId < 0) {
     res.status(400).json({
@@ -149,7 +145,6 @@ app.post('/api/cart', (req, res, next) => {
       var rowPrice = result.rows;
       var arrayPrice = rowPrice.map(a => a.price);
       var indexPrice = arrayPrice[0];
-      // console.log(indexPrice);
       if (result.rows.length === 0) {
         throw new ClientError('oh no , an unexpected error occurred.', 404);
       }
@@ -164,7 +159,6 @@ app.post('/api/cart', (req, res, next) => {
         const values3 = [req.session.cartId, proId, indexPrice];
         return db.query(sql3, values3)
           .then(result3 => {
-            // console.log('result3: ', result3);
 
             const cartItemId = result3.rows[0].cartItemId;
             const sql4 =
@@ -181,7 +175,6 @@ app.post('/api/cart', (req, res, next) => {
 
             return db.query(sql4, values4)
               .then(result4 => {
-                // console.log(result4);
                 res.status(201).json(
                   result4.rows[0]
                 );
@@ -196,11 +189,8 @@ app.post('/api/cart', (req, res, next) => {
 
         return db.query(sqlCart)
           .then(result2 => {
-          // console.log('result2.rows[0]: ' + result2.rows[0]);
-          // var rowCartId = result2.rows;
             var arrayCartId = result2.rows[0].cartId;
             req.session.cartId = arrayCartId;
-            // console.log('req.session.cartId: ', req.session.cartId);
 
             var priceCartId = {
               cartId: arrayCartId,
@@ -215,8 +205,6 @@ app.post('/api/cart', (req, res, next) => {
             const values3 = [arrayCartId, proId, indexPrice];
             return db.query(sql3, values3)
               .then(result3 => {
-              // console.log('result3: ', result3);
-
                 const cartItemId = result3.rows[0].cartItemId;
                 const sql4 =
               `select "c"."cartItemId",
@@ -232,7 +220,6 @@ app.post('/api/cart', (req, res, next) => {
 
                 return db.query(sql4, values4)
                   .then(result4 => {
-                  // console.log(result4);
                     res.status(201).json(
                       result4.rows[0]
                     );
@@ -243,6 +230,9 @@ app.post('/api/cart', (req, res, next) => {
 
     }).catch(error => {
       console.error(error);
+      res.status(500).json({
+        error: 'an unexpected error occurred'
+      });
     });
 });
 

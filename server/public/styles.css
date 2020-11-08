@@ -5,6 +5,7 @@ body {
 .header-row{
   padding-left:5%;
   display: flex;
+  justify-content: space-between;
   background-color: #333A40;
   padding-bottom: .5%;
   width: 100%;
@@ -15,11 +16,38 @@ body {
   padding-top: 1%;
   color: white;
   font-weight: 300;
+
 }
 
 .money-sign {
   margin-top:1%;
   color: white;
+}
+
+.rows {
+  display: flex;
+}
+
+
+.wicked-container{
+  display: flex;
+  margin-top: 1%;
+}
+
+.cart-container {
+  margin-top: 1%;
+  margin-right: 4%;
+
+}
+
+.shopping-cart {
+  color: white;
+  margin-left: 10px;
+}
+
+.item-count{
+  color: white;
+
 }
 
 

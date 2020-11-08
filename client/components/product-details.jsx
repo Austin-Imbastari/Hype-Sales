@@ -6,6 +6,7 @@ class ProductDetails extends React.Component {
     this.state = {
       product: null
     };
+    this.detailClick = this.detailClick.bind(this);
   }
 
   componentDidMount() {
@@ -24,6 +25,10 @@ class ProductDetails extends React.Component {
     var numberPrice = oldprice / 100;
     var newNumber = numberPrice.toFixed(2);
     return newNumber;
+  }
+
+  detailClick() {
+    this.props.addToCart(this.state.product);
   }
 
   render() {
@@ -46,7 +51,7 @@ class ProductDetails extends React.Component {
                 <h5 className="card-title"> {this.state.product.name} </h5>
                 <p className="card-text">${this.addPeriod(this.state.product.price)} </p>
                 <p className="card-des"> {this.state.product.shortDescription} </p>
-                <button className="square_btn"> Add to Cart </button>
+                <button onClick={this.detailClick} className="square_btn"> Add to Cart </button>
               </div>
             </div>
             <div className="long-des">
