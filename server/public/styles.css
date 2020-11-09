@@ -135,3 +135,22 @@ back-to-catalog:hover {
 button:focus {
   outline:0;
 }
+
+.card-item {
+  display: flex;
+}
+.card-item-container {
+  display: flex;
+  justify-content: center;
+  -webkit-box-shadow: 5px 12px 12px 0px rgba(0,0,0,0.43);
+  box-shadow: 5px 12px 12px 0px rgba(0,0,0,0.43);
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+  margin-top: 2%;
+  border: solid rgba(0, 0, 0, 0.079);
+}
+
+.total-price, .back-to-catalog {
+  margin-left: 10px;
+}

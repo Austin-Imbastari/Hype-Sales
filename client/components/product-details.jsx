@@ -7,6 +7,7 @@ class ProductDetails extends React.Component {
       product: null
     };
     this.detailClick = this.detailClick.bind(this);
+    this.catalogclick = this.catalogclick.bind(this);
   }
 
   componentDidMount() {
@@ -31,6 +32,10 @@ class ProductDetails extends React.Component {
     this.props.addToCart(this.state.product);
   }
 
+  catalogclick() {
+    this.props.setView('catalog', null);
+  }
+
   render() {
     if (!this.state.product) {
       return null;
@@ -41,7 +46,7 @@ class ProductDetails extends React.Component {
         <div className="card-details">
           <div className="container-list">
             <div>
-              <a className='back-to-catalog' href=''> Back to catalog </a>
+              <div onClick={this.catalogclick} className='back-to-catalog'> Back to catalog </div>
             </div>
             <div className="image-short-container">
               <div className="image-detail">
