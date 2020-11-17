@@ -150,7 +150,6 @@ app.post('/api/cart', (req, res, next) => {
       }
 
       if (req.session.cartId) {
-        console.log('cart id exists');
 
         const sql3 = `insert into "cartItems" ("cartId", "productId", "price")
           values ($1, $2, $3)
@@ -192,15 +191,9 @@ app.post('/api/cart', (req, res, next) => {
             var arrayCartId = result2.rows[0].cartId;
             req.session.cartId = arrayCartId;
 
-            var priceCartId = {
-              cartId: arrayCartId,
-              price: indexPrice
-            };
-            console.log(priceCartId);
-
             const sql3 = `insert into "cartItems" ("cartId", "productId", "price")
-          values ($1, $2, $3)
-          returning "cartItemId"`;
+              values ($1, $2, $3)
+              returning "cartItemId"`;
 
             const values3 = [arrayCartId, proId, indexPrice];
             return db.query(sql3, values3)
