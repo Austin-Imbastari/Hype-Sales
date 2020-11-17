@@ -99,9 +99,6 @@ app.get('/api/cartItems', (req, res, next) => {
 });
 
 app.get('/api/cart', (req, res, next) => {
-  // console.log('inside api/cart');
-  // console.log(req.session.cartId);
-
   if (!req.session.cartId) {
     res.json([]);
   } else {
@@ -218,7 +215,6 @@ app.post('/api/cart', (req, res, next) => {
               });
           });
       }
-
     }).catch(error => {
       console.error(error);
       res.status(500).json({
@@ -236,17 +232,17 @@ app.post('/api/orders', (req, res, next) => {
   } else if (!Number(req.body.creditCard) || req.body.creditCard.length !== 16) {
     throw new ClientError('creditCard must be a 16 digit number with no spaces', 400);
   }
-  const insert = `
+  const sql = `
     insert into "orders" ("name", "creditCard", "shippingAddress", "cartId")
         values ($1, $2, $3, $4)
     returning "orderId",
               "createdAt",
               "name",
               "creditCard",
-              "shippingAddress";
+              "shippingAddress"
   `;
-  const params = [req.body.name, req.body.creditCard, req.body.shippingAddress, req.session.cartId];
-  db.query(insert, params)
+  const values = [req.body.name, req.body.creditCard, req.body.shippingAddress, req.session.cartId];
+  db.query(sql, values)
     .then(order => {
       delete req.session.cartId;
       res.status(201).json(order.rows[0]);

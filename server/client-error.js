@@ -1,4 +1,3 @@
-
 class ClientError {
   constructor(message, status) {
     this.message = message;

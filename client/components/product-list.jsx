@@ -7,7 +7,6 @@ class ProductList extends React.Component {
     this.state = {
       value: []
     };
-
   }
 
   componentDidMount() {
