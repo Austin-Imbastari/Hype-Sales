@@ -13,6 +13,11 @@ function CartSummary(props) {
     props.setView('catalog', null);
   }
 
+  function checkOut() {
+    (props.setView('checkout', { totalPrice: totalPrice }));
+    // props.setView('checkout', null);
+  }
+
   var totalPrice = 0;
   props.cartItems.forEach(item => { totalPrice += item.price; });
 
@@ -29,11 +34,14 @@ function CartSummary(props) {
         <div onClick={catalogclick} className='back-to-catalog'>
           <p> Back to catalog </p>
         </div>
+      </div>
+      {cartItems}
+      <div className="checkout-box">
         <h4 className="total-price">
           Total Price ${addPeriod(totalPrice)}
         </h4>
+        <button onClick={checkOut} className="square_btn checkout-btn"> Checkout </button>
       </div>
-      {cartItems}
     </React.Fragment>
   );
 }

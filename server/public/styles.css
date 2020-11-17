@@ -113,23 +113,23 @@ back-to-catalog:hover {
 
 .card-details {
   padding: 20px;
-    border: solid 1px rgba(0, 0, 0, 0.134);
+  border: solid 1px rgba(0, 0, 0, 0.134);
 }
 
 .square_btn{
-    padding: 0.2em .5em;
-    text-decoration: none;
-    background: #03A9F4;
-    color: #FFF;
-    font-size: 12px;
-    border-bottom: solid 4px #627295;
-    border-radius: 10px;
+  padding: 0.2em .5em;
+  text-decoration: none;
+  background: #03A9F4;
+  color: #FFF;
+  font-size: 12px;
+  border-bottom: solid 4px #627295;
+  border-radius: 10px;
 }
 .square_btn:active {
-    -ms-transform: translateY(4px);
-    -webkit-transform: translateY(4px);
-    transform: translateY(4px);
-    border-bottom: none;
+  -ms-transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  border-bottom: none;
 
 }
 button:focus {
@@ -153,4 +153,24 @@ button:focus {
 
 .total-price, .back-to-catalog {
   margin-left: 10px;
+}
+
+.checkout-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.checkout-btn {
+  margin-right: 15px;
+}
+
+.form {
+  margin-left: 50px;
+  margin-right: 50%;
+}
+
+.form-total {
+  color: #333a4082;
+  font-weight: 400;
 }
