@@ -15,7 +15,6 @@ function CartSummary(props) {
 
   function checkOut() {
     (props.setView('checkout', { totalPrice: totalPrice }));
-    // props.setView('checkout', null);
   }
 
   var totalPrice = 0;

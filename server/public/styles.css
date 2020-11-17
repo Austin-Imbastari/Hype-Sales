@@ -16,7 +16,6 @@ body {
   padding-top: 1%;
   color: white;
   font-weight: 300;
-
 }
 
 .money-sign {
@@ -28,7 +27,6 @@ body {
   display: flex;
 }
 
-
 .wicked-container{
   display: flex;
   margin-top: 1%;
@@ -37,7 +35,6 @@ body {
 .cart-container {
   margin-top: 1%;
   margin-right: 4%;
-
 }
 
 .shopping-cart {
@@ -47,9 +44,7 @@ body {
 
 .item-count{
   color: white;
-
 }
-
 
 .card-container {
   margin-top: 2%;
@@ -97,7 +92,6 @@ body {
 .card-des-long {
   padding-left: 5px;
   padding-top: 20px;
-
 }
 
 .back-to-catalog:link {
@@ -130,8 +124,8 @@ back-to-catalog:hover {
   -webkit-transform: translateY(4px);
   transform: translateY(4px);
   border-bottom: none;
-
 }
+
 button:focus {
   outline:0;
 }
@@ -139,6 +133,7 @@ button:focus {
 .card-item {
   display: flex;
 }
+
 .card-item-container {
   display: flex;
   justify-content: center;

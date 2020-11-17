@@ -22,13 +22,11 @@ class CheckOutForm extends React.Component {
   }
 
   orderPlaced() {
-    debugger;
     const order = {
       name: this.state.name,
       shippingAddress: this.state.shippingAddress,
       creditCard: this.state.creditCard
     };
-    console.log(order);
     this.props.placeOrder(order);
   }
 
@@ -57,8 +55,8 @@ class CheckOutForm extends React.Component {
             <input value={this.state.name} onChange={this.handleChange} type="text" className="form-control" id="name" placeholder="Enter name"></input>
           </div>
           <div className="form-group">
-            <label htmlFor="password1">Credit Card</label>
-            <input value={this.state.creditCard} onChange={this.handleChangeCredit} type="text" className="form-control" id="password1" placeholder="000-0000-0000-0000"></input>
+            <label htmlFor="credit">Credit Card</label>
+            <input value={this.state.creditCard} onChange={this.handleChangeCredit} type="text" className="form-control" id="credit" placeholder="000-0000-0000-0000"></input>
           </div>
           <div className="form-group">
             <label htmlFor="shipping">Shipping Address</label>
