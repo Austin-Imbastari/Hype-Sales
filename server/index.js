@@ -99,8 +99,8 @@ app.get('/api/cartItems', (req, res, next) => {
 });
 
 app.get('/api/cart', (req, res, next) => {
-  console.log('inside api/cart');
-  console.log(req.session.cartId);
+  // console.log('inside api/cart');
+  // console.log(req.session.cartId);
 
   if (!req.session.cartId) {
     res.json([]);
@@ -126,8 +126,6 @@ app.get('/api/cart', (req, res, next) => {
 app.post('/api/cart', (req, res, next) => {
   var proId = parseInt(req.body.productId);
   var values = [proId];
-  console.log('proId: ' + proId);
-
   if (!Number.isInteger(proId) || proId < 0) {
     res.status(400).json({
       error: 'invalid id'
@@ -150,7 +148,6 @@ app.post('/api/cart', (req, res, next) => {
       }
 
       if (req.session.cartId) {
-        console.log('cart id exists');
 
         const sql3 = `insert into "cartItems" ("cartId", "productId", "price")
           values ($1, $2, $3)
@@ -192,15 +189,9 @@ app.post('/api/cart', (req, res, next) => {
             var arrayCartId = result2.rows[0].cartId;
             req.session.cartId = arrayCartId;
 
-            var priceCartId = {
-              cartId: arrayCartId,
-              price: indexPrice
-            };
-            console.log(priceCartId);
-
             const sql3 = `insert into "cartItems" ("cartId", "productId", "price")
-          values ($1, $2, $3)
-          returning "cartItemId"`;
+              values ($1, $2, $3)
+              returning "cartItemId"`;
 
             const values3 = [arrayCartId, proId, indexPrice];
             return db.query(sql3, values3)
@@ -234,6 +225,33 @@ app.post('/api/cart', (req, res, next) => {
         error: 'an unexpected error occurred'
       });
     });
+});
+
+app.post('/api/orders', (req, res, next) => {
+  if (!req.session.cartId) {
+    throw new ClientError('No session with that "cartId" exists', 400);
+  }
+  if (!req.body.name || !req.body.creditCard || !req.body.shippingAddress) {
+    throw new ClientError('"name", "creditCard", and "shippingAddress" must all be filled out', 400);
+  } else if (!Number(req.body.creditCard) || req.body.creditCard.length !== 16) {
+    throw new ClientError('creditCard must be a 16 digit number with no spaces', 400);
+  }
+  const insert = `
+    insert into "orders" ("name", "creditCard", "shippingAddress", "cartId")
+        values ($1, $2, $3, $4)
+    returning "orderId",
+              "createdAt",
+              "name",
+              "creditCard",
+              "shippingAddress";
+  `;
+  const params = [req.body.name, req.body.creditCard, req.body.shippingAddress, req.session.cartId];
+  db.query(insert, params)
+    .then(order => {
+      delete req.session.cartId;
+      res.status(201).json(order.rows[0]);
+    })
+    .catch(err => console.error(err));
 });
 
 app.use('/api', (req, res, next) => {
