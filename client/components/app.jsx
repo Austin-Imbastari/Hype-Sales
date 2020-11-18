@@ -5,6 +5,7 @@ import ProductList from './product-list';
 import CartSummary from './cart-summary';
 import CheckOutForm from './checkout-form';
 import HomePage from './homepage';
+import CheckoutDisclaimer from './checkout-disclaimer';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -12,7 +13,8 @@ export default class App extends React.Component {
     this.state = {
       view: { name: 'homepage', params: {} },
       cart: [],
-      displayHeader: false
+      displayHeader: false,
+      totalPrice: 0
     };
     this.setView = this.setView.bind(this);
     this.addToCart = this.addToCart.bind(this);
@@ -70,8 +72,10 @@ export default class App extends React.Component {
 
   setView(x, p) {
     this.setState({ view: { name: x, params: p } });
-    if (p.displayHeader) {
+    if (p && p.displayHeader) {
       this.setState({ displayHeader: p.displayHeader });
+    } else if (p && p.totalPrice) {
+      this.setState({ totalPrice: p.totalPrice });
     }
   }
 
@@ -87,7 +91,9 @@ export default class App extends React.Component {
     } else if (displayName === 'cart') {
       display = <CartSummary cartItems={this.state.cart} setView={this.setView} />;
     } else if (displayName === 'checkout') {
-      display = <CheckOutForm orderItems={this.state.cart} placeOrder={this.placeOrder} setView={this.setView} totalPrice={this.state.view.params.totalPrice}/>;
+      display = <CheckOutForm orderItems={this.state.cart} placeOrder={this.placeOrder} setView={this.setView} totalPrice={this.state.totalPrice}/>;
+    } else if (displayName === 'checkout-disclaimer') {
+      display = <CheckoutDisclaimer setView={this.setView}/>;
     } else {
       display = <p>Nothing to display</p>;
     }
