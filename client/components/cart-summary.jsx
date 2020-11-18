@@ -14,7 +14,7 @@ function CartSummary(props) {
   }
 
   function checkOut() {
-    (props.setView('checkout', { totalPrice: totalPrice }));
+    (props.setView('checkout-disclaimer', { totalPrice: totalPrice }));
   }
 
   var totalPrice = 0;
