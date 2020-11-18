@@ -83,13 +83,6 @@ body {
   object-fit: contain;
 }
 
-@media only screen and (max-width: 600px) {
-  .image {
-    height: 200px;
-  }
-}
-
-
 .card-text {
   color: #333a4082;
   font-weight: 400;
@@ -133,13 +126,6 @@ back-to-catalog:hover {
 .card-details {
   padding: 20px;
   border: solid 1px rgba(0, 0, 0, 0.134);
-}
-
-@media only screen and (max-width: 600px) {
-  .card-details  {
-    width: 100%;
-    margin-left: 0%;
-  }
 }
 
 .square_btn{
@@ -223,5 +209,27 @@ button:focus {
     margin-top: 10px;
     width: 100%;
     margin-left: 0%;
+  }
+}
+
+@media only screen
+  and (min-device-width : 375px)
+  and (max-device-width : 667px) {
+    .card-details {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+@media only screen and (max-width: 600px) {
+  .card-details  {
+    width: 100%;
+    margin-left: 0%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .image {
+    height: 200px;
   }
 }
