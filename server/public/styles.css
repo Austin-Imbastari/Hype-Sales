@@ -7,6 +7,28 @@ body {
   background-color: black;
 }
 
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.hp-text {
+  text-align: center;
+  margin-top: 10%;
+  color: white
+}
+
+.hp-btn {
+  width: 90px;
+  margin-left: 45%;
+  margin-top: 3%;
+  background: white;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  color: black;
+}
+
 .header-row{
   padding-left:5%;
   display: flex;
@@ -303,5 +325,22 @@ button:focus {
     .form {
     margin-left: 0%;
     width: 100%;
+  }
+}
+
+@media only screen
+  and (min-device-width : 375px)
+  and (max-device-width : 667px)
+  and (orientation : portrait) {
+    .hp-text {
+      margin-top: 50%;
+      font-size: 20px;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+    .hp-btn {
+    margin-top: 10%;
+    margin-left: 38%;
+    /* width: 100%; */
   }
 }

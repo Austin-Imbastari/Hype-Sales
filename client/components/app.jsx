@@ -4,13 +4,15 @@ import ProductDetails from './product-details';
 import ProductList from './product-list';
 import CartSummary from './cart-summary';
 import CheckOutForm from './checkout-form';
+import HomePage from './homepage';
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      view: { name: 'catalog', params: {} },
-      cart: []
+      view: { name: 'homepage', params: {} },
+      cart: [],
+      displayHeader: false
     };
     this.setView = this.setView.bind(this);
     this.addToCart = this.addToCart.bind(this);
@@ -68,12 +70,17 @@ export default class App extends React.Component {
 
   setView(x, p) {
     this.setState({ view: { name: x, params: p } });
+    if (p.displayHeader) {
+      this.setState({ displayHeader: p.displayHeader });
+    }
   }
 
   render() {
     const displayName = this.state.view.name;
     let display;
-    if (displayName === 'catalog') {
+    if (displayName === 'homepage') {
+      display = <HomePage setView={this.setView} />;
+    } else if (displayName === 'catalog') {
       display = <ProductList setView={this.setView}/>;
     } else if (displayName === 'detail') {
       display = <ProductDetails addToCart={this.addToCart} productId={this.state.view.params} setView={this.setView}/>;
@@ -86,7 +93,7 @@ export default class App extends React.Component {
     }
     return (
       <React.Fragment>
-        <Headers cartItemCount={this.state.cart.length} setView={this.setView}/>
+        <Headers displayHeader = {this.state.displayHeader} cartItemCount={this.state.cart.length} setView={this.setView} />
         {display}
       </React.Fragment>
     );
