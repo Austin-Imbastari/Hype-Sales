@@ -29,17 +29,19 @@ function CartSummary(props) {
 
   return (
     <React.Fragment>
-      <div>
-        <div onClick={catalogclick} className='back-to-catalog'>
-          <p className="text-summary"> Back to catalog </p>
+      <div className="cart-summary-container">
+        <div>
+          <div onClick={catalogclick} className='back-to-catalog'>
+            <p className="text-summary"> Back to catalog </p>
+          </div>
         </div>
-      </div>
-      {cartItems}
-      <div className="checkout-box">
-        <h4 className="total-price">
+        {cartItems}
+        <div className="checkout-box">
+          <h4 className="total-price">
           Total Price ${addPeriod(totalPrice)}
-        </h4>
-        <button onClick={checkOut} className="square_btn checkout-btn"> Checkout </button>
+          </h4>
+          <button onClick={checkOut} className="square_btn checkout-btn"> Checkout </button>
+        </div>
       </div>
     </React.Fragment>
   );
