@@ -46,7 +46,7 @@ class CheckOutForm extends React.Component {
     return (
       <React.Fragment>
         <form className="form">
-          <h1 className="form-header">My Drip</h1>
+          <h1 className="form-header">My Cart</h1>
           <h4 className="form-total">
           Total Price ${this.addPeriod(this.props.totalPrice)}
           </h4>

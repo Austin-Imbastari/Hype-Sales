@@ -10,7 +10,7 @@ body {
   padding-left:5%;
   display: flex;
   justify-content: space-between;
-  background-color: rgba(255,98,82,0.51);
+  background-color: white;
   padding-bottom: .5%;
   width: 100%;
   margin-bottom: 1%;
@@ -19,7 +19,7 @@ body {
 .nav-heading {
   padding-top: 1%;
   color: black;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .money-sign {
@@ -59,15 +59,15 @@ body {
 }
 
 .card {
-  -webkit-box-shadow: 5px 6px 6px 3px rgba(255,98,82,0.51);
-  box-shadow: 5px 6px 6px 3px rgba(255,98,82,0.51);
+  -webkit-box-shadow: 5px 5px 4px 4px rgba(255,255,255,0.32);
+  box-shadow: 5px 5px 4px 4px rgba(255,255,255,0.32);
   background: #FFFFFF;
   cursor: crosshair;
 }
 
 .card-details {
-  -webkit-box-shadow: 5px 6px 6px 3px rgba(255,98,82,0.51);
-  box-shadow: 5px 6px 6px 3px rgba(255,98,82,0.51);
+  -webkit-box-shadow: 5px 5px 4px 4px rgba(255,255,255,0.32);
+  box-shadow: 5px 5px 4px 4px rgba(255,255,255,0.32);
   background: #FFFFFF;
   width: 50%;
   margin-left: 25%;
@@ -120,7 +120,7 @@ body {
 
 back-to-catalog:hover {
   text-decoration: none;
-  cursor: pointer;
+  cursor: crosshair;
 }
 
 .card-details {
@@ -151,8 +151,8 @@ button:focus {
 .card-item-container {
   display: flex;
   justify-content: center;
-  -webkit-box-shadow: 5px 6px 6px 3px rgba(255,98,82,0.51);
-  box-shadow: 5px 6px 6px 3px rgba(255,98,82,0.51);
+  -webkit-box-shadow: 5px 5px 4px 4px rgba(255,255,255,0.32);
+  box-shadow: 5px 5px 4px 4px rgba(255,255,255,0.32);
   background: #FFFFFF;
   margin-left: 10%;
   margin-right: 10%;
@@ -176,8 +176,8 @@ button:focus {
 }
 
 .form {
-  -webkit-box-shadow: 5px 6px 6px 3px rgba(255,98,82,0.51);
-  box-shadow: 5px 6px 6px 3px rgba(255,98,82,0.51);
+  -webkit-box-shadow: 5px 5px 4px 4px rgba(255,255,255,0.32);
+  box-shadow: 5px 5px 4px 4px rgba(255,255,255,0.32);
   background-color: white;
   margin-left: 50px;
   margin-right: 50%;
