@@ -1,5 +1,6 @@
 * {
   font-family: 'Lato', sans-serif;
+  cursor: crosshair;
 }
 
 body {
@@ -39,12 +40,13 @@ body {
 .cart-container {
   margin-top: 1%;
   margin-right: 4%;
+  cursor: pointer;
 }
 
 .shopping-cart {
   color: black;
   margin-left: 10px;
-  cursor: crosshair;
+  cursor: pointer;
 }
 
 .item-count{
@@ -112,15 +114,24 @@ body {
     padding-left: 10%;
 }
 
+.text-summary {
+  cursor: pointer;
+}
+
+.back-to-catalog {
+  cursor: pointer;
+}
+
 .back-to-catalog:link {
   padding-left: 10px;
   text-decoration: none;
   color: #333a4071;
+  cursor: pointer;
 }
 
 back-to-catalog:hover {
   text-decoration: none;
-  cursor: crosshair;
+  cursor: pointer;
 }
 
 .card-details {

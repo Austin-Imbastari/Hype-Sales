@@ -73,7 +73,6 @@ export default class App extends React.Component {
   render() {
     const displayName = this.state.view.name;
     let display;
-
     if (displayName === 'catalog') {
       display = <ProductList setView={this.setView}/>;
     } else if (displayName === 'detail') {
@@ -85,7 +84,6 @@ export default class App extends React.Component {
     } else {
       display = <p>Nothing to display</p>;
     }
-
     return (
       <React.Fragment>
         <Headers cartItemCount={this.state.cart.length} setView={this.setView}/>
