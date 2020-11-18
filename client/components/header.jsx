@@ -12,7 +12,7 @@ function Headers(props) {
       <div className="col-sm header-row">
         <div className='wicked-container'>
           <MdAttachMoney className="money-sign" size="1.4rem"/>
-          <h5 className="nav-heading">Wicked Sales</h5>
+          <h5 className="nav-heading">Hype Sales</h5>
         </div>
         <div className='cart-container'>
           <span className="item-count">

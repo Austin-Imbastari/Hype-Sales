@@ -1,12 +1,16 @@
+* {
+font-family: 'Lato', sans-serif;
+}
+
 body {
-  background-color: #F8F9FA;
+  background-color: black;
 }
 
 .header-row{
   padding-left:5%;
   display: flex;
   justify-content: space-between;
-  background-color: #333A40;
+  background-color: rgba(255,98,82,0.51);
   padding-bottom: .5%;
   width: 100%;
   margin-bottom: 1%;
@@ -14,13 +18,13 @@ body {
 
 .nav-heading {
   padding-top: 1%;
-  color: white;
+  color: black;
   font-weight: 300;
 }
 
 .money-sign {
   margin-top:1%;
-  color: white;
+  color: black;
 }
 
 .rows {
@@ -38,12 +42,12 @@ body {
 }
 
 .shopping-cart {
-  color: white;
+  color: black;
   margin-left: 10px;
 }
 
 .item-count{
-  color: white;
+  color: black;
 }
 
 .card-container {
@@ -54,13 +58,15 @@ body {
 }
 
 .card {
-  -webkit-box-shadow: 5px 12px 12px 0px rgba(0,0,0,0.43);
-  box-shadow: 5px 12px 12px 0px rgba(0,0,0,0.43);
+  -webkit-box-shadow: 5px 6px 6px 3px rgba(255,98,82,0.51);
+  box-shadow: 5px 6px 6px 3px rgba(255,98,82,0.51);
+  background: #FFFFFF;
 }
 
 .card-details {
-  -webkit-box-shadow: 5px 12px 12px 0px rgba(0,0,0,0.43);
-  box-shadow: 5px 12px 12px 0px rgba(0,0,0,0.43);
+  -webkit-box-shadow: 5px 6px 6px 3px rgba(255,98,82,0.51);
+  box-shadow: 5px 6px 6px 3px rgba(255,98,82,0.51);
+  background: #FFFFFF;
   width: 50%;
   margin-left: 25%;
 }
@@ -94,6 +100,15 @@ body {
   padding-top: 20px;
 }
 
+.total-price {
+  padding-left: 10%;
+  color: rgba(255,98,82,0.51);
+}
+
+.text-summary {
+  color: white;
+}
+
 .back-to-catalog:link {
   padding-left: 10px;
   text-decoration: none;
@@ -111,12 +126,8 @@ back-to-catalog:hover {
 }
 
 .square_btn{
-  padding: 0.2em .5em;
-  text-decoration: none;
-  background: #03A9F4;
-  color: #FFF;
+  background: white;
   font-size: 12px;
-  border-bottom: solid 4px #627295;
   border-radius: 10px;
 }
 .square_btn:active {
@@ -137,8 +148,9 @@ button:focus {
 .card-item-container {
   display: flex;
   justify-content: center;
-  -webkit-box-shadow: 5px 12px 12px 0px rgba(0,0,0,0.43);
-  box-shadow: 5px 12px 12px 0px rgba(0,0,0,0.43);
+  -webkit-box-shadow: 5px 6px 6px 3px rgba(255,98,82,0.51);
+  box-shadow: 5px 6px 6px 3px rgba(255,98,82,0.51);
+  background: #FFFFFF;
   margin-left: 10%;
   margin-right: 10%;
   margin-bottom: 5%;
@@ -157,15 +169,34 @@ button:focus {
 }
 
 .checkout-btn {
-  margin-right: 15px;
+  margin-right: 10%;
 }
 
 .form {
+  -webkit-box-shadow: 5px 6px 6px 3px rgba(255,98,82,0.51);
+  box-shadow: 5px 6px 6px 3px rgba(255,98,82,0.51);
+  background-color: white;
   margin-left: 50px;
   margin-right: 50%;
+  border-radius: 10px;
+}
+
+.form-group{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.form-header{
+  margin-left: 10px;
 }
 
 .form-total {
+  margin-left: 10px;
   color: #333a4082;
   font-weight: 400;
+}
+
+.form-btn{
+  margin-left: 10px;
+  margin-bottom: 10px;
 }

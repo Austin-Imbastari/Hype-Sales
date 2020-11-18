@@ -31,7 +31,7 @@ function CartSummary(props) {
     <React.Fragment>
       <div>
         <div onClick={catalogclick} className='back-to-catalog'>
-          <p> Back to catalog </p>
+          <p className="text-summary"> Back to catalog </p>
         </div>
       </div>
       {cartItems}

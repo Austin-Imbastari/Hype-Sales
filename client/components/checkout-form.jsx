@@ -46,7 +46,7 @@ class CheckOutForm extends React.Component {
     return (
       <React.Fragment>
         <form className="form">
-          <h1>My Cart</h1>
+          <h1 className="form-header">My Drip</h1>
           <h4 className="form-total">
           Total Price ${this.addPeriod(this.props.totalPrice)}
           </h4>
@@ -62,7 +62,7 @@ class CheckOutForm extends React.Component {
             <label htmlFor="shipping">Shipping Address</label>
             <input value={this.state.shippingAddress} onChange={this.handleChangeShippingAddress} type="text" className="form-control" id="shipping" placeholder="address.."></input>
           </div>
-          <button onClick={this.orderPlaced} onChange={this.handleChange} className="square_btn"> Place Order!</button>
+          <button onClick={this.orderPlaced} onChange={this.handleChange} className="square_btn form-btn"> Place Order!</button>
         </form>
       </React.Fragment>
     );
