@@ -34,8 +34,8 @@ function CartSummary(props) {
           <div onClick={catalogclick} className='back-to-catalog'>
             <p className="text-summary"> Back to catalog </p>
           </div>
+          {cartItems}
         </div>
-        {cartItems}
         <div className="checkout-box">
           <h4 className="total-price">
           Total Price ${addPeriod(totalPrice)}
