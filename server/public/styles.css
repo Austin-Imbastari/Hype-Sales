@@ -1,5 +1,5 @@
 * {
-font-family: 'Lato', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 body {
@@ -235,19 +235,19 @@ button:focus {
 }
 
 @media only screen
-and (min-device-width : 375px)
-and (max-device-width : 812px)
-and (-webkit-device-pixel-ratio : 3)
-and (orientation : portrait) {
+  and (min-device-width : 375px)
+  and (max-device-width : 812px)
+  and (-webkit-device-pixel-ratio : 3)
+  and (orientation : portrait) {
   .card-item-container {
     margin-left: 0%;
     width: 100%;
   }
 }
 @media only screen
-and (min-device-width : 375px)
-and (max-device-width : 667px)
-and (orientation : portrait) {
+  and (min-device-width : 375px)
+  and (max-device-width : 667px)
+  and (orientation : portrait) {
     .card-item-container {
     margin-left: 0%;
     width: 100%;
@@ -255,9 +255,9 @@ and (orientation : portrait) {
 }
 
 @media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : portrait) {
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : portrait) {
   .card-details {
     margin-left: 0%;
     width: 100%;
@@ -269,9 +269,9 @@ and (orientation : portrait) {
 }
 
 @media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape) {
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : landscape) {
   .card-details {
     margin-left: 0%;
     width: 100%;
@@ -283,9 +283,9 @@ and (orientation : landscape) {
 }
 
 @media only screen
-and (min-device-width : 375px)
-and (max-device-width : 667px)
-and (orientation : landscape) {
+  and (min-device-width : 375px)
+  and (max-device-width : 667px)
+  and (orientation : landscape) {
     .form {
     margin-left: 0%;
     width: 100%;
