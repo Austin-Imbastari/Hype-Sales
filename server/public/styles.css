@@ -104,7 +104,7 @@ body {
 
 .total-price {
   padding-left: 10%;
-  color: rgba(255,98,82,0.51);
+  color: white;
 }
 
 .text-summary {
@@ -129,9 +129,10 @@ back-to-catalog:hover {
 }
 
 .square_btn{
-  background: white;
+  background: black;
   font-size: 12px;
   border-radius: 10px;
+  color: white;
 }
 .square_btn:active {
   -ms-transform: translateY(4px);
