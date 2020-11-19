@@ -42,7 +42,7 @@ Try the application live at [https://wicked-sales-js.austinimbastari.com/](https
     cd wicked-sales-js
 
 1. Install all dependencies with NPM.
- ```shell
+ ```
     npm install
     ```
 
