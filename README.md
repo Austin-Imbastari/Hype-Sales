@@ -38,12 +38,12 @@ Try the application live at [https://wicked-sales-js.austinimbastari.com/](https
 
 1. Clone the repository.
 
-    git clone https://github.com/Austin-Imbastari/wicked-sales-js.git
-    cd wicked-sales-js
+     ```git clone https://github.com/Austin-Imbastari/wicked-sales-js.git
+    cd wicked-sales-js ```
 
 1. Install all dependencies with NPM.
 
-    npm install
+     ```npm install ```
 
 1. Start the project. Once started you can view the application by opening http://localhost:3000 in your browser.
 
