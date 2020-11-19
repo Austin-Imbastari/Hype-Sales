@@ -32,7 +32,7 @@ Try the application live at [https://wicked-sales-js.austinimbastari.com/](https
 
 ## Preview
 
-![Sep-29-2020 12-40-26](https://user-images.githubusercontent.com/55529532/94607589-fb331400-0250-11eb-930b-91d4475147d7.gif)
+![Nov-19-2020 11-37-20](https://user-images.githubusercontent.com/55529532/99715382-a2674700-2a5b-11eb-986b-11ab0c3c5a91.gif)
 
 ### Getting Started
 
