@@ -42,7 +42,8 @@ Try the application live at [https://wicked-sales-js.austinimbastari.com/](https
     cd wicked-sales-js```
 
 2. Install all dependencies with NPM.
- ```npm install```
+ ```
+ npm install```
 
 3. Start the project. Once started you can view the application by opening http://localhost:3000 in your browser.
 
