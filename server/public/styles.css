@@ -216,7 +216,7 @@ button:focus {
   box-shadow: 5px 5px 4px 4px rgba(255,255,255,0.32);
   background-color: white;
   margin-left: 50px;
-  margin-right: 50%;
+  margin-right: 3%;
   border-radius: 10px;
 }
 
@@ -241,7 +241,7 @@ button:focus {
 }
 
 @media only screen and (max-width: 600px) {
-  .form  {
+  .form {
     margin-top: 10px;
     width: 100%;
     margin-left: 0%;

@@ -453,6 +453,362 @@ COPY public."cartItems" ("cartItemId", "cartId", "productId", price) FROM stdin;
 222	63	1	2999
 223	64	3	2900
 224	64	3	2900
+225	64	1	2999
+226	65	1	2999
+227	65	2	2595
+228	65	1	2999
+229	65	3	2900
+230	65	1	2999
+231	65	2	2595
+232	65	3	2900
+233	65	3	2900
+234	65	3	2900
+235	65	2	2595
+236	65	2	2595
+237	65	2	2595
+238	65	2	2595
+239	65	2	2595
+240	65	2	2595
+241	65	2	2595
+242	65	2	2595
+243	65	2	2595
+244	65	2	2595
+245	65	2	2595
+246	65	2	2595
+247	65	3	2900
+248	65	3	2900
+249	65	3	2900
+250	65	3	2900
+251	65	3	2900
+252	65	3	2900
+253	65	3	2900
+254	65	3	2900
+255	65	1	2999
+256	65	3	2900
+257	65	2	2595
+258	65	2	2595
+259	65	2	2595
+260	65	2	2595
+261	65	3	2900
+262	65	3	2900
+263	65	3	2900
+264	65	3	2900
+265	65	3	2900
+266	65	3	2900
+267	65	3	2900
+268	65	3	2900
+269	65	3	2900
+270	65	3	2900
+271	65	3	2900
+272	65	3	2900
+273	65	3	2900
+274	65	3	2900
+275	65	3	2900
+276	65	3	2900
+277	65	3	2900
+278	65	3	2900
+279	65	3	2900
+280	65	3	2900
+281	65	3	2900
+282	65	3	2900
+283	65	3	2900
+284	65	3	2900
+285	65	3	2900
+286	65	3	2900
+287	65	3	2900
+288	65	3	2900
+289	65	3	2900
+290	65	3	2900
+291	65	3	2900
+292	65	3	2900
+293	65	3	2900
+294	65	3	2900
+295	65	3	2900
+296	65	3	2900
+297	65	3	2900
+298	65	3	2900
+299	65	3	2900
+300	65	3	2900
+301	65	3	2900
+302	65	3	2900
+303	65	3	2900
+304	65	3	2900
+305	65	3	2900
+306	65	3	2900
+307	65	3	2900
+308	65	3	2900
+309	65	3	2900
+310	65	3	2900
+311	65	3	2900
+312	65	3	2900
+313	65	3	2900
+314	65	3	2900
+315	65	3	2900
+316	65	3	2900
+317	65	3	2900
+318	65	3	2900
+319	65	3	2900
+320	65	3	2900
+321	65	3	2900
+322	65	3	2900
+323	65	3	2900
+324	65	2	2595
+325	65	2	2595
+326	65	3	2900
+327	65	3	2900
+328	65	1	2999
+329	65	2	2595
+330	65	3	2900
+331	65	3	2900
+332	65	3	2900
+333	65	3	2900
+334	65	3	2900
+335	65	3	2900
+336	65	3	2900
+337	65	2	2595
+338	65	2	2595
+339	65	2	2595
+340	65	3	2900
+341	65	3	2900
+342	65	3	2900
+343	65	3	2900
+344	65	3	2900
+345	65	3	2900
+346	66	3	2900
+347	66	1	2999
+348	67	3	2900
+349	67	3	2900
+350	68	3	2900
+351	68	3	2900
+352	68	3	2900
+353	68	3	2900
+354	68	3	2900
+355	68	1	2999
+356	69	7	18900
+357	69	7	18900
+358	69	8	18500
+359	69	8	18500
+360	69	8	18500
+361	69	8	18500
+362	69	8	18500
+363	69	8	18500
+364	69	8	18500
+365	69	8	18500
+366	69	8	18500
+367	69	10	9500
+368	69	8	18500
+369	69	8	18500
+370	69	8	18500
+371	69	8	18500
+372	69	8	18500
+373	69	8	18500
+374	69	8	18500
+375	69	8	18500
+376	69	8	18500
+377	69	10	9500
+378	69	7	18900
+379	69	7	18900
+380	69	8	18500
+381	69	8	18500
+382	69	7	18900
+383	69	7	18900
+384	69	10	9500
+385	69	8	18500
+386	69	8	18500
+387	69	8	18500
+388	69	8	18500
+389	69	8	18500
+390	69	8	18500
+391	69	8	18500
+392	69	10	9500
+393	69	10	9500
+394	69	8	18500
+395	69	8	18500
+396	69	8	18500
+397	69	12	46500
+398	69	8	18500
+399	69	8	18500
+400	69	8	18500
+401	69	8	18500
+402	69	8	18500
+403	69	7	18900
+404	69	7	18900
+405	69	7	18900
+406	69	7	18900
+407	69	7	18900
+408	69	7	18900
+409	69	7	18900
+410	69	7	18900
+411	69	7	18900
+412	69	7	18900
+413	69	7	18900
+414	69	7	18900
+415	69	7	18900
+416	69	7	18900
+417	69	7	18900
+418	69	7	18900
+419	69	8	18500
+420	69	7	18900
+421	69	7	18900
+422	69	10	9500
+423	69	7	18900
+424	69	7	18900
+425	69	7	18900
+426	69	7	18900
+427	69	7	18900
+428	69	7	18900
+429	69	7	18900
+430	69	7	18900
+431	69	7	18900
+432	69	7	18900
+433	69	7	18900
+434	69	7	18900
+435	69	7	18900
+436	69	7	18900
+437	69	7	18900
+438	69	7	18900
+439	69	7	18900
+440	69	7	18900
+441	69	11	20900
+442	69	9	89000
+443	69	9	89000
+444	69	7	18900
+445	69	7	18900
+446	69	7	18900
+447	69	7	18900
+448	69	7	18900
+449	69	8	18500
+450	69	7	18900
+451	69	10	9500
+452	69	9	89000
+453	69	11	20900
+454	69	12	46500
+455	69	10	9500
+456	69	8	18500
+457	69	8	18500
+458	69	7	18900
+459	69	7	18900
+460	69	7	18900
+461	69	8	18500
+462	69	8	18500
+463	69	8	18500
+464	69	10	9500
+465	69	10	9500
+466	69	10	9500
+467	69	10	9500
+468	69	8	18500
+469	69	7	18900
+470	69	7	18900
+471	69	7	18900
+472	69	12	46500
+473	69	12	46500
+474	69	12	46500
+475	69	8	18500
+476	70	7	18900
+477	70	7	18900
+478	70	7	18900
+479	70	7	18900
+480	70	7	18900
+481	70	8	18500
+482	70	8	18500
+483	70	8	18500
+484	70	8	18500
+485	70	7	18900
+486	70	8	18500
+487	70	8	18500
+488	70	9	89000
+489	70	9	89000
+490	70	9	89000
+491	70	9	89000
+492	70	7	18900
+493	70	8	18500
+494	70	8	18500
+495	70	8	18500
+496	70	10	9500
+497	71	7	18900
+498	71	7	18900
+499	71	12	46500
+500	71	7	18900
+501	71	7	18900
+502	71	7	18900
+503	71	7	18900
+504	71	7	18900
+505	71	7	18900
+506	71	11	20900
+507	71	11	20900
+508	71	11	20900
+509	71	11	20900
+510	71	7	18900
+511	71	7	18900
+512	71	7	18900
+513	71	7	18900
+514	71	7	18900
+515	71	7	18900
+516	71	7	18900
+517	71	7	18900
+518	71	7	18900
+519	71	7	18900
+520	71	7	18900
+521	71	10	9500
+522	71	10	9500
+523	71	10	9500
+524	71	10	9500
+525	71	7	18900
+526	71	7	18900
+527	71	7	18900
+528	71	7	18900
+529	71	7	18900
+530	71	7	18900
+531	71	9	89000
+532	71	9	89000
+533	71	9	89000
+534	71	9	89000
+535	71	9	89000
+536	71	9	89000
+537	71	9	89000
+538	71	9	89000
+539	71	9	89000
+540	71	9	89000
+541	71	9	89000
+542	71	9	89000
+543	71	9	89000
+544	71	9	89000
+545	71	9	89000
+546	71	9	89000
+547	71	9	89000
+548	71	9	89000
+549	71	9	89000
+550	71	9	89000
+551	71	9	89000
+552	71	9	89000
+553	71	9	89000
+554	71	9	89000
+555	71	9	89000
+556	71	9	89000
+557	71	9	89000
+558	71	9	89000
+559	71	9	89000
+560	71	9	89000
+561	71	9	89000
+562	71	9	89000
+563	71	9	89000
+564	71	9	89000
+565	71	9	89000
+566	71	9	89000
+567	71	9	89000
+568	71	9	89000
+569	71	9	89000
+570	71	9	89000
+571	71	10	9500
+572	71	10	9500
+573	71	10	9500
+574	71	10	9500
+575	71	8	18500
+576	71	8	18500
+577	71	7	18900
+578	71	8	18500
+579	71	8	18500
+580	71	8	18500
 \.
 
 
@@ -525,6 +881,13 @@ COPY public.carts ("cartId", "createdAt") FROM stdin;
 62	2020-11-09 01:59:44.262303+00
 63	2020-11-09 15:46:23.07272+00
 64	2020-11-17 02:59:02.823845+00
+65	2020-11-17 17:35:06.582151+00
+66	2020-11-17 21:43:41.121743+00
+67	2020-11-17 22:59:14.342959+00
+68	2020-11-17 23:00:58.316871+00
+69	2020-11-17 23:46:48.966149+00
+70	2020-11-18 05:18:23.912443+00
+71	2020-11-18 16:37:39.1572+00
 \.
 
 
@@ -533,6 +896,9 @@ COPY public.carts ("cartId", "createdAt") FROM stdin;
 --
 
 COPY public.orders ("orderId", "cartId", name, "creditCard", "shippingAddress", "createdAt") FROM stdin;
+1	65	qqqq	2487283974279429	1101 N Avila Place	2020-11-17 21:36:52.933981+00
+2	66	austin	2487283974279429	1101 N Avila Place	2020-11-17 21:44:10.229661+00
+3	68	austin	2487283974279429	110 N palmdale st	2020-11-17 23:04:29.61792+00
 \.
 
 
@@ -541,12 +907,12 @@ COPY public.orders ("orderId", "cartId", name, "creditCard", "shippingAddress", 
 --
 
 COPY public.products ("productId", name, price, image, "shortDescription", "longDescription") FROM stdin;
-1	Shake Weight	2999	/images/shake-weight.jpg	Dynamic Inertia technology ignites muscles in arms, shoulders, and chest.	Lorem ipsum dolor amet fashion axe pour-over jianbing, adaptogen waistcoat tacos master cleanse pitchfork next level. Thundercats pour-over chartreuse 90's. Master cleanse hot chicken ennui offal. Freegan slow-carb offal hell of. Umami polaroid wolf slow-carb next level. Gentrify cardigan seitan, kombucha tacos chambray roof party typewriter man braid. Tote bag lo-fi hell of chia fam hammock.\\nAesthetic photo booth la croix, vaporware leggings biodiesel man braid tumeric skateboard tousled slow-carb four dollar toast synth pabst pickled. Typewriter church-key chia slow-carb vice gochujang actually. Shoreditch austin woke hot chicken, single-origin coffee ugh affogato four loko green juice. Migas iPhone four dollar toast mustache.
-2	ShamWow	2595	/images/shamwow.jpg	It's like a chamois, towel, and sponge, all in one! Soaks up to 10x it's weight in any liquid!	Lorem ipsum dolor amet fashion axe pour-over jianbing, adaptogen waistcoat tacos master cleanse pitchfork next level. Thundercats pour-over chartreuse 90's. Master cleanse hot chicken ennui offal. Freegan slow-carb offal hell of. Umami polaroid wolf slow-carb next level. Gentrify cardigan seitan, kombucha tacos chambray roof party typewriter man braid. Tote bag lo-fi hell of chia fam hammock.\\nAesthetic photo booth la croix, vaporware leggings biodiesel man braid tumeric skateboard tousled slow-carb four dollar toast synth pabst pickled. Typewriter church-key chia slow-carb vice gochujang actually. Shoreditch austin woke hot chicken, single-origin coffee ugh affogato four loko green juice. Migas iPhone four dollar toast mustache.
-3	Snuggie	2900	/images/snuggie.jpg	Super-Soft Fleece with pockets! One Size fits all Adults! Keeps you Warm & Your Hands-Free!	Lorem ipsum dolor amet fashion axe pour-over jianbing, adaptogen waistcoat tacos master cleanse pitchfork next level. Thundercats pour-over chartreuse 90's. Master cleanse hot chicken ennui offal. Freegan slow-carb offal hell of. Umami polaroid wolf slow-carb next level. Gentrify cardigan seitan, kombucha tacos chambray roof party typewriter man braid. Tote bag lo-fi hell of chia fam hammock.\\nAesthetic photo booth la croix, vaporware leggings biodiesel man braid tumeric skateboard tousled slow-carb four dollar toast synth pabst pickled. Typewriter church-key chia slow-carb vice gochujang actually. Shoreditch austin woke hot chicken, single-origin coffee ugh affogato four loko green juice. Migas iPhone four dollar toast mustache.
-4	Wax Vac	999	/images/wax-vac.jpg	Gentle way to remove ear wax. Safe and hygienic. Reduces the risk of painful infections.	Lorem ipsum dolor amet fashion axe pour-over jianbing, adaptogen waistcoat tacos master cleanse pitchfork next level. Thundercats pour-over chartreuse 90's. Master cleanse hot chicken ennui offal. Freegan slow-carb offal hell of. Umami polaroid wolf slow-carb next level. Gentrify cardigan seitan, kombucha tacos chambray roof party typewriter man braid. Tote bag lo-fi hell of chia fam hammock.\\nAesthetic photo booth la croix, vaporware leggings biodiesel man braid tumeric skateboard tousled slow-carb four dollar toast synth pabst pickled. Typewriter church-key chia slow-carb vice gochujang actually. Shoreditch austin woke hot chicken, single-origin coffee ugh affogato four loko green juice. Migas iPhone four dollar toast mustache.
-5	Ostrich Pillow	9900	/images/ostrich-pillow.jpg	Create your own snugly space in the world and feel-good anywhere with the ultimate cocoon pillow.	Lorem ipsum dolor amet fashion axe pour-over jianbing, adaptogen waistcoat tacos master cleanse pitchfork next level. Thundercats pour-over chartreuse 90's. Master cleanse hot chicken ennui offal. Freegan slow-carb offal hell of. Umami polaroid wolf slow-carb next level. Gentrify cardigan seitan, kombucha tacos chambray roof party typewriter man braid. Tote bag lo-fi hell of chia fam hammock.\\nAesthetic photo booth la croix, vaporware leggings biodiesel man braid tumeric skateboard tousled slow-carb four dollar toast synth pabst pickled. Typewriter church-key chia slow-carb vice gochujang actually. Shoreditch austin woke hot chicken, single-origin coffee ugh affogato four loko green juice. Migas iPhone four dollar toast mustache.
-6	Tater Mitts	830	/images/tater-mitts.jpg	8 Seconds is all you need with Tater Mitts. Quickly and easily prepare all your favorite potato dishes with Tater Mitts.	Lorem ipsum dolor amet fashion axe pour-over jianbing, adaptogen waistcoat tacos master cleanse pitchfork next level. Thundercats pour-over chartreuse 90's. Master cleanse hot chicken ennui offal. Freegan slow-carb offal hell of. Umami polaroid wolf slow-carb next level. Gentrify cardigan seitan, kombucha tacos chambray roof party typewriter man braid. Tote bag lo-fi hell of chia fam hammock.\\nAesthetic photo booth la croix, vaporware leggings biodiesel man braid tumeric skateboard tousled slow-carb four dollar toast synth pabst pickled. Typewriter church-key chia slow-carb vice gochujang actually. Shoreditch austin woke hot chicken, single-origin coffee ugh affogato four loko green juice. Migas iPhone four dollar toast mustache.
+7	ACNE STUDIOS EXFORD METALLIC FACE TEE	18900	/images/acne-tee.jpg	In bold black and gold, this Acne Studios tee is sure to crack a smile.	In bold black and gold, this Acne Studios tee is sure to crack a smile. Centered with the label’s signature face logo, it’s consciously crafted from organic cotton and cut to a relaxed fit for a nonchalant finish.
+10	NEIGHBORHOOD IN MY EYES TEE	9500	/images/neighbor-tee.jpg	Neighborhood is heavily influenced by subcultures, with pieces like this tee synonymous with the label.	Neighborhood is heavily influenced by subcultures, with pieces like this tee synonymous with the label. Piercing eyes features printed at the chest, placed above metal-inspired text reading ‘MASTERS OF LEGALIZED CONFUSION’. The Ura-Hara-based label’s block letter logo features printed at the back to complete things.
+8	PACCBET CHECKED HOOD POPOVER HOODY	18500	/images/paccbet-hoodie.jpg	The hood of this PACCBET sweater is covered with grey plaid.	The hood of this PACCBET sweater is covered with grey plaid, while the Russian brand’s logo is stamped in bold yellow at its chest. Made to look like two pieces layered, it’s a skate-ready piece that’s completed with snug ribbed trims.
+9	VETEMENTS ALL OVER PRINT CREW KNIT	89000	/images/vetement-sweater.jpg	VETEMENTS serves up a healthy dose of logomania with this black crewneck.	VETEMENTS serves up a healthy dose of logomania with this black crew, detailing it all-over with ‘VETEMENTS’ in bright white. It’s handknitted in Italy using a blend of cotton and cashmere, resulting in a piece that’s equal parts luxe to street-ready.
+11	COMME DES GARCONS PLAY PULLOVER HOODY	20900	/images/cdg-hoodie.jpg	Simply styled with a fun twist, this Comme des Garcons PLAY hoody.	Simply styled with a fun twist, this Comme des Garcons PLAY hoody recreates the aesthetic that gained the brand its cult following. The jet black jersey is trimmed with comfortable ribbing, while the label’s iconic heart logo stares out from the chest.
+12	MONCLER MOUNTAIN LOGO SWEAT	46500	/images/moncler.jpg	Moncler pays homage to its heritage with this black sweat, detailing the front with a large, French Alps-inspired logo.	Moncler pays homage to its heritage with this black sweat, detailing the front with a large, French Alps-inspired logo. It’s cut from comfortable cotton jersey and finished, as you’d expect, with the iconic rooster logo at one arm.
 \.
 
 
@@ -554,28 +920,28 @@ COPY public.products ("productId", name, price, image, "shortDescription", "long
 -- Name: cartItems_cartItemId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."cartItems_cartItemId_seq"', 224, true);
+SELECT pg_catalog.setval('public."cartItems_cartItemId_seq"', 580, true);
 
 
 --
 -- Name: carts_cartId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."carts_cartId_seq"', 64, true);
+SELECT pg_catalog.setval('public."carts_cartId_seq"', 71, true);
 
 
 --
 -- Name: orders_orderId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."orders_orderId_seq"', 1, false);
+SELECT pg_catalog.setval('public."orders_orderId_seq"', 3, true);
 
 
 --
 -- Name: products_productId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."products_productId_seq"', 1, false);
+SELECT pg_catalog.setval('public."products_productId_seq"', 1, true);
 
 
 --
